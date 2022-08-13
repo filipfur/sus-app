@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #161616;
 }
 
 .App-logo {
@@ -14,18 +19,59 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #eee;
   min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: #16161640 0 0 0.25em 0.125em;
+}
+
+.picture
+{
+  width: 20em;
+  height: 20em;
+  object-fit: cover;
+  border-radius: 9999px;
+  border: solid 0.4em #eee;
+  box-shadow: #16161640 0 0 0.25em 0.125em;
+}
+
+.App-body
+{
+  width: 40em;
+  max-width: 80vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.App-post
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #0cf;
+}
+
+.social-handle
+{
+  background-color: #eee;
+  display: inline-flex;
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #16161640 0 0 0.25em 0.125em;
 }
 
 @keyframes App-logo-spin {
