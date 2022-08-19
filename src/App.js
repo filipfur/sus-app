@@ -1,29 +1,88 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import { SocialIcon } from 'react-social-icons';
+import { MdAlternateEmail } from 'react-icons/md'
+import { AiOutlineCheck, AiFillDollarCircle } from 'react-icons/ai'
+import remarkGfm from 'remark-gfm';
+
+export function ImageRenderer({ src, alt }) {
+  var content = <img src={src} alt={alt} />;
+  if(alt === "icon-at")
+  {
+    content = <MdAlternateEmail/>
+  }
+  else if(alt === "icon-check")
+  {
+    content = <AiOutlineCheck/>
+  }
+  else if(alt === 'icon-dollar')
+  {
+    content = <AiFillDollarCircle/>
+  }
+  else if(alt === "social-icon")
+  {
+    content = <SocialIcon url={src}/>
+  }
+  else if(alt == "social-handle")
+  {
+    content = (
+      <div className="social-handle">
+        <SocialIcon url="https://discord.gg/uvKHeBqF"/>
+        <a className="App-link" href={src} style={{marginLeft: "0.5em"}}>{src}</a>
+      </div>
+    )
+  }
+  return content;
+}
+
+export function Page({src})
+{
+  const [content, setContent] = useState("");
+
+  useEffect(() => {
+    fetch(src)
+      .then((res) => res.text())
+      .then((text) => {
+        setContent(text)
+      });
+  }, [src]);
+
+  return (
+    <div className="App-page">
+      <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} components={{ img: ImageRenderer }}/>
+    </div>
+  )
+}
 
 function App() {
+
+  useEffect(()=>{
+    /*listReactFiles("pages").then((file) => {
+      console.log(file);
+    });*/
+  },[]);
+
   return (
     <div className="App">
       <header className="App-header">
         <img src="sus-logo.png" className="App-logo" alt="logo" />
         <p>
-          Svenska Spelutvecklingssällskapet - 2022.
+          Svenska Spelutvecklingssällskapet
         </p>
-        <a className="App-link" href="#section0">
+        <span style={{fontSize: "75%", marginBottom: "2em"}}><i>
+          "Med syfte att främja spelutvecklingen i Sverige."
+        </i></span>
+        <a className="App-link" onClick={()=>{
+          console.log("hello wolrds!");
+          document.getElementsByTagName("h1")[0].scrollIntoView();
+        }}>
           Läs mer
         </a>
       </header>
       <div className="App-body">
-        <div className="App-post">
-          <h1><a name="section0">Om oss</a></h1>
-          <p>Svenska Spelutvecklingssällskapet (<b>SUS</b>) är en ideell förening för alla som är nyfikna på eller redan är aktiva inom spelutveckling. Vi riktar oss till glada amatörer såväl som branschledande industriproffs.</p>
-          <img className="picture" src="nuke.png"/>
-          <p>Vi håller till på discord. Ingen medlemsansökan krävs utan det är bara att följa inbjudningslänken.</p>
-          <div className="social-handle">
-          <SocialIcon url="https://discord.gg/uvKHeBqF"/> <a className="App-link" href="https://discord.gg/uvKHeBqF">https://discord.gg/uvKHeBqF</a>
-          </div>
-        </div>
+        <Page src="pages/about.md" />
       </div>
     </div>
   );

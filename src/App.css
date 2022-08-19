@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #ccc;
+  background-color: #dbdbdb;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,8 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 70vw;
+  max-height: 50vh;
   pointer-events: none;
 }
 
@@ -44,7 +45,7 @@
 {
   width: 40em;
   max-width: 80vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -52,16 +53,58 @@
   justify-content: space-evenly;
 }
 
-.App-post
+img[alt*="thumbnail"]
+{
+  width: 20em;
+  height: 20em;
+  max-width: 80vw;
+  max-height: 80vw;
+  object-fit: cover;
+  border-radius: 9999px;
+  border: solid 0.4em #eee;
+  box-shadow: #16161640 0 0 0.25em 0.125em;
+}
+
+img[alt*="bright"]
+{
+  filter: brightness(2.75);
+}
+
+.App-page
 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  max-width: 80vw;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+th, td
+{
+  padding: 0.4em;
+  border: 1px solid #555;
+}
+
+table
+{
+  border-collapse: collapse;
+  border: none;
+  padding: 1em;
+  background-color: #eee;
+  box-shadow: #16161640 0 0 0.25em 0.125em;
 }
 
 .App-link {
   color: #0cf;
+  cursor: pointer;
+  text-align: center;
+}
+
+.App-link:hover
+{
+  color: #0ee;
 }
 
 .social-handle
