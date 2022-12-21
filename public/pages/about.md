@@ -1,8 +1,6 @@
 # Om oss
 Svenska Spelutvecklingssällskapet, förkortat *SUS*, är en ideell förening för spelutvecklare som är verksamma i Sverige. Vi riktar oss till glada amatörer såväl som branschledande industriproffs. Har du ett intresse för spelutveckling och vill träffa människor som delar ditt intresse? Då tror vi att SUS är helt rätt forum för dig.
 
-## Hej
-
 ![bright thumbnail](nuke.png)
 
 ![quote Svenska spelutvecklingssällskapet äger.]()
