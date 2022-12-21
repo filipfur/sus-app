@@ -9,23 +9,21 @@ import remarkGfm from 'remark-gfm';
 
 export function ImageRenderer({ src, alt }) {
   var content = <img src={src} alt={alt} />;
-  if(alt === "icon-at")
+  if(alt === "react-icon")
   {
-    content = <MdAlternateEmail/>
-  }
-  else if(alt === "icon-check")
-  {
-    content = <AiOutlineCheck/>
-  }
-  else if(alt === 'icon-dollar')
-  {
-    content = <AiFillDollarCircle/>
+    if(src === "at") { content = <MdAlternateEmail/> }
+    else if(src === "check") { content = <AiOutlineCheck/> }
+    else if(src === "dollar") { content = <AiFillDollarCircle/> } 
   }
   else if(alt === "social-icon")
   {
     content = <SocialIcon url={src}/>
   }
-  else if(alt == "social-handle")
+  else if(alt.startsWith("quote"))
+  {
+    content = <span style={{borderLeft: "2px solid magenta", fontWeight: "bold", fontStyle: "italic", paddingLeft: "1em"}}>{alt.substring(alt.indexOf(" ") + 1)}</span>
+  }
+  else if(alt === "social-handle")
   {
     content = (
       <div className="social-handle">
@@ -83,6 +81,7 @@ function App() {
       </header>
       <div className="App-body">
         <Page src="pages/about.md" />
+        <Page src="pages/events.md" />
       </div>
     </div>
   );
