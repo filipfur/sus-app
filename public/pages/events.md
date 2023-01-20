@@ -1,5 +1,3 @@
-# Planerade events
-
 Här hittar ni information om de senaste eventen samt anmälan.
 
 |Datum|Event|Anmälan|

@@ -7,28 +7,45 @@
   color: #161616;
 }
 
-.App-logo {
-  height: 70vw;
-  max-height: 50vh;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/*@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 20s linear;
   }
-}
+}*/ 
 
-.App-header {
-  background-color: #eee;
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+.header {
+  width: 100vw;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.frame
+{
+  background-color: #eee;
   box-shadow: #16161640 0 0 0.25em 0.125em;
+}
+
+.box
+{
+  box-sizing: border-box;
+  padding: 0.5rem;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+}
+
+.logo {
+  height: 6rem;
+  pointer-events: none;
+  right: 0;
+  margin-right: 8em;
+  position: absolute;
+}
+
+.link-container
+{
+  display: flex;
+  flex-direction: row;
 }
 
 .picture
@@ -41,28 +58,21 @@
   box-shadow: #16161640 0 0 0.25em 0.125em;
 }
 
-.App-body
+.page-container
 {
-  width: 40em;
-  max-width: 80vw;
-  min-height: 100vh;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 img[alt*="thumbnail"]
 {
-  width: 20em;
-  height: 20em;
-  max-width: 80vw;
-  max-height: 80vw;
+  width: 14em;
+  height: 14em;
+  margin: 0.5em;
   object-fit: cover;
   border-radius: 9999px;
-  border: solid 0.4em #eee;
-  box-shadow: #16161640 0 0 0.25em 0.125em;
+  border: solid 0.3em #555;
+  box-shadow: #16161640 0 0 0.45em 0.225em;
 }
 
 img[alt*="bright"]
@@ -75,21 +85,41 @@ img[alt*="small"]
   width: 20px;
 }
 
-.App-page
+.page
 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  max-width: 80vw;
-  min-height: 100vh;
-  width: 100vw;
+  flex-wrap: wrap;
+  width: 80vw;
+  max-width: 960px;
+  margin: 1rem;
+}
+
+.page h1
+{
+  width: 100%;
+}
+.page p
+{
+  width: 30vw;
 }
 
 th, td
 {
   padding: 0.4em;
-  border: 1px solid #555;
+  font-size: 80%;
+}
+
+th
+{
+  border-bottom: 0.1em solid #888;
+}
+
+td
+{
+  background-color: #e0e0e0;
 }
 
 table
@@ -101,13 +131,14 @@ table
   box-shadow: #16161640 0 0 0.25em 0.125em;
 }
 
-.App-link {
-  color: #0cf;
+.link {
   cursor: pointer;
   text-align: center;
+  font-size: 75%;
+  margin: 1em 1.5em;
 }
 
-.App-link:hover
+.link:hover
 {
   color: #0ee;
 }
@@ -122,7 +153,7 @@ table
   box-shadow: #16161640 0 0 0.25em 0.125em;
 }
 
-@keyframes App-logo-spin {
+@keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }

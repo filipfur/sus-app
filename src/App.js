@@ -6,6 +6,7 @@ import { SocialIcon } from 'react-social-icons';
 import { MdAlternateEmail } from 'react-icons/md'
 import { AiOutlineCheck, AiFillDollarCircle } from 'react-icons/ai'
 import remarkGfm from 'remark-gfm';
+import { margin, width } from '@mui/system';
 
 export function ImageRenderer({ src, alt }) {
   var content = <img src={src} alt={alt} />;
@@ -21,14 +22,20 @@ export function ImageRenderer({ src, alt }) {
   }
   else if(alt.startsWith("quote"))
   {
-    content = <span style={{borderLeft: "2px solid magenta", fontWeight: "bold", fontStyle: "italic", paddingLeft: "1em"}}>{alt.substring(alt.indexOf(" ") + 1)}</span>
+    content = (<>
+    <div style={{borderLeft: "0.2em solid magenta", fontWeight: "bold", fontStyle: "italic", paddingLeft: "0.5em"}}>
+      <span>
+        {alt.substring(alt.indexOf(" ") + 1)}
+      </span>
+    </div>
+    </>)
   }
   else if(alt === "social-handle")
   {
     content = (
       <div className="social-handle">
         <SocialIcon url="https://discord.gg/uvKHeBqF"/>
-        <a className="App-link" href={src} style={{marginLeft: "0.5em"}}>{src}</a>
+        <a className="link" href={src} style={{marginLeft: "0.5em"}}>{src}</a>
       </div>
     )
   }
@@ -48,11 +55,13 @@ export function Page({src})
   }, [src]);
 
   return (
-    <div className="App-page">
+    <div className="page box">
       <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} components={{ img: ImageRenderer }}/>
     </div>
   )
 }
+
+// document.getElementsByTagName("h1")[0].scrollIntoView();
 
 function App() {
 
@@ -64,24 +73,27 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="sus-logo.png" className="App-logo" alt="logo" />
-        <p>
-          Svenska Spelutvecklingssällskapet
-        </p>
-        <span style={{fontSize: "75%", marginBottom: "2em"}}><i>
-          "Med syfte att främja spelutvecklingen i Sverige."
-        </i></span>
-        <a className="App-link" onClick={()=>{
-          console.log("hello wolrds!");
-          document.getElementsByTagName("h1")[0].scrollIntoView();
-        }}>
-          Läs mer
+      <header className="header frame box">
+        <div className='link-container'>
+        <a className="link">
+          <span>Hem</span>
         </a>
+        <a className="link">
+          <span>Events</span>
+        </a>
+        <a className="link">
+          <span>Medlemsansökan</span>
+        </a>
+        <a className="link">
+          <span>Kontakt</span>
+        </a>
+        <img src="sus-logo.png" className="logo" alt="logo" />
+        </div>
       </header>
-      <div className="App-body">
+      <div className="page-container">
         <Page src="pages/about.md" />
         <Page src="pages/events.md" />
+        <Page src="pages/social.md" />
       </div>
     </div>
   );
