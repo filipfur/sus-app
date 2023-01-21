@@ -70,7 +70,8 @@ img[alt*="thumbnail"]
   height: 14em;
   margin: 0.5em;
   object-fit: cover;
-  border-radius: 9999px;
+  /*border-radius: 9999px;*/
+  /*transform:  translateX(-2em) rotateZ(-8deg);*/
   border: solid 0.3em #555;
   box-shadow: #16161640 0 0 0.45em 0.225em;
 }
@@ -93,8 +94,8 @@ img[alt*="small"]
   justify-content: center;
   flex-wrap: wrap;
   width: 80vw;
-  max-width: 960px;
-  margin: 1rem;
+  max-width: 1400px;
+  margin: 2em 0;
 }
 
 .page h1
@@ -105,6 +106,11 @@ img[alt*="small"]
 {
   width: 30vw;
 }
+
+/*table
+{
+  transform: translateX(2em) rotate(8deg);
+}*/
 
 th, td
 {
@@ -159,5 +165,12 @@ table
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .page {
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
 }
