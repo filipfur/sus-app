@@ -15,9 +15,16 @@
 
 .header {
   width: 100vw;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+}
+
+.slippin
+{
+  height: unset;
+  position: fixed;
 }
 
 .frame
@@ -31,15 +38,30 @@
   box-sizing: border-box;
   padding: 0.5rem;
   display: flex;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1.6vmin);
 }
 
 .logo {
-  height: 6rem;
   pointer-events: none;
-  right: 0;
-  margin-right: 8em;
+  image-rendering: crisp-edges;
+  height: 20em;
+}
+
+.slippin .logo {
   position: absolute;
+  right: 0;
+  top: 0.5em;
+  margin-right: 8em;
+  height: 6rem;
+}
+
+.firstpage img {
+  flex-direction: column;
+  margin: 1em;
+}
+
+.slippin .firstpage {
+  visibility: collapse;
 }
 
 .link-container
@@ -86,6 +108,12 @@ img[alt*="small"]
   width: 20px;
 }
 
+img[alt*="medium"]
+{
+  width: 100px;
+  image-rendering: crisp-edges;
+}
+
 .page
 {
   display: flex;
@@ -95,12 +123,13 @@ img[alt*="small"]
   flex-wrap: wrap;
   width: 80vw;
   max-width: 1400px;
-  margin: 2em 0;
+  min-height: 100vh;
 }
 
 .page h1
 {
   width: 100%;
+  padding-top: 4em;
 }
 .page p
 {
@@ -137,16 +166,22 @@ table
   box-shadow: #16161640 0 0 0.25em 0.125em;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 .link {
   cursor: pointer;
   text-align: center;
   font-size: 75%;
   margin: 1em 1.5em;
+  color: #333;
 }
 
 .link:hover
 {
-  color: #0ee;
+  color: #4ae;
 }
 
 .social-handle
