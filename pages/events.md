@@ -1,6 +1,8 @@
-# Planerade events
+# Events {#events}
 
 Här hittar ni information om de senaste eventen samt anmälan.
+
+[PLACEHOLDER BILD]
 
 |Datum|Event|Anmälan|
 |-|-|-|
