@@ -1,9 +1,11 @@
 import './MerchWidget.css'
 
-function WidgetItem()
+import { GiLockedChest } from 'react-icons/gi'
+
+function WidgetItem({children, src})
 {
     return (<div className='item'>
-        <img src="./discord-logo-black.png"></img>
+        {children}
         <span className='item-price'>0.0 SEK</span>
     </div>)
 }
@@ -12,22 +14,22 @@ export function MerchWidget()
 {
     return (<div className="widget">
         <div className='item-container'>
-            <WidgetItem/>
-            <WidgetItem/>
-            <WidgetItem/>
-            <WidgetItem/>
-            <WidgetItem/>
-            <WidgetItem/>
-            <WidgetItem/>
-            <WidgetItem/>
-            <WidgetItem/>
-            <WidgetItem/>
-            <WidgetItem/>
-            <WidgetItem/>
-            <WidgetItem/>
-            <WidgetItem/>
-            <WidgetItem/>
-            <WidgetItem/>
+            <WidgetItem><img style={{width: "8em", height: "8em"}} src={"./sus-logo.png"}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
         </div>
         <div className="footer">
             <span>Cost: 0.0 SEK</span>
