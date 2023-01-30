@@ -12,6 +12,7 @@
     "list-react-files": "^0.2.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-google-forms-hooks": "^1.2.4",
     "react-icons": "^4.4.0",
     "react-markdown": "^8.0.4",
     "react-scripts": "5.0.1",

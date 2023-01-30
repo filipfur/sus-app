@@ -8,6 +8,7 @@ import { AiOutlineCheck, AiFillDollarCircle } from 'react-icons/ai'
 import remarkGfm from 'remark-gfm';
 import remarkHeadingId from 'remark-heading-id';
 import { margin, width } from '@mui/system';
+import { MerchWidget } from './MerchWidget';
 
 export function ImageRenderer({ src, alt }) {
     var content = <img src={src} alt={alt} />;
@@ -35,6 +36,10 @@ export function ImageRenderer({ src, alt }) {
                 <a className="link" href={src} style={{ marginLeft: "0.5em" }}>{src}</a>
             </div>
         )
+    }
+    else if (alt == "merch-widget")
+    {
+        content = <MerchWidget></MerchWidget>
     }
     else if (alt === "hspacer") {
         content = <span style={{ marginLeft: src, visibility: "hidden" }}></span>

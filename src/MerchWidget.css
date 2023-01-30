@@ -1,0 +1,41 @@
+.widget
+{
+    background-color: #4ae;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+
+.item
+{
+    width: 10em;
+    height: 10em;
+    border: 0.2em solid #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2em;
+    position: relative;
+}
+
+.item-price
+{ 
+    position: absolute;
+    right: 0.1em;
+    bottom: 0.1em;
+}
+
+.item-container
+{  
+    background-color: #777;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.4em;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    max-height: 24em;
+}
