@@ -18,14 +18,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: fixed;
   height: 100vh;
   z-index: 999;
+  transition: height .3s;
 }
 
 .slippin
 {
-  height: unset;
-  position: fixed;
+  height: 3em;
 }
 
 .frame
@@ -132,8 +133,17 @@ img[alt*="medium"]
   width: 100%;
   padding-top: 4em;
 }
-.page p
+.page a
 {
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.page a:hover
+{
+  color: #4ae;
 }
 
 /*table
@@ -192,6 +202,18 @@ a {
   justify-content: center;
   align-items: center;
   box-shadow: #16161640 0 0 0.25em 0.125em;
+}
+
+.quote
+{
+  border-left: 0.2em solid #4ae;
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 0.5em;
+}
+.quote span
+{
+  width: 12em;
 }
 
 @keyframes logo-spin {

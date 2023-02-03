@@ -10,6 +10,8 @@ import remarkHeadingId from 'remark-heading-id';
 import { margin, width } from '@mui/system';
 import { MerchWidget } from './MerchWidget';
 
+const SCROLL_THRESH_Y = 0;
+
 export function ImageRenderer({ src, alt }) {
     var content = <img src={src} alt={alt} />;
     if (alt === "react-icon") {
@@ -22,7 +24,7 @@ export function ImageRenderer({ src, alt }) {
     }
     else if (alt.startsWith("quote")) {
         content = (<>
-            <div style={{ borderLeft: "0.2em solid magenta", fontWeight: "bold", fontStyle: "italic", paddingLeft: "0.5em" }}>
+            <div className="quote">
                 <span>
                     {alt.substring(alt.indexOf(" ") + 1)}
                 </span>
@@ -67,6 +69,20 @@ export function Page({ src }) {
 
 // document.getElementsByTagName("h1")[0].scrollIntoView();
 
+function Link({children, href})
+{
+    return (
+        <a className="link" href={href} /*onClick={() => {
+            if(window.scrollY <= SCROLL_THRESH_Y)
+            {
+                window.scrollTo(0, SCROLL_THRESH_Y + 1);
+            }
+        }}*/>
+            <span>{children}</span>
+        </a>
+    )
+}
+
 function App() {
 
     const [extra, setExtra] = useState("");
@@ -77,7 +93,7 @@ function App() {
         });*/
 
         const handleScroll = () => {
-            if (window.scrollY > 64) {
+            if (window.scrollY > SCROLL_THRESH_Y) {
                 setExtra(" slippin");
             }
             else {
@@ -95,24 +111,11 @@ function App() {
         <div className="App">
             <header className={"header frame box" + extra}>
                 <div className='link-container'>
-                    <a className="link" href=".">
-                        <span>Om oss</span>
-                    </a>
-                    <a className="link" href='#discord'>
-                        <span>Discord</span>
-                    </a>
-                    <a className="link" href="#events">
-                        <span>Events</span>
-                    </a>
-                    <a className="link" href="#signup">
-                        <span>Medlemsansökan</span>
-                    </a>
-                    <a className="link" href='#merch'>
-                        <span>Merch</span>
-                    </a>
-                    <a className="link" href="#contact">
-                        <span>Kontakt</span>
-                    </a>
+                    <Link href="#about">Om oss</Link>
+                    <Link href="#discord">Discord</Link>
+                    <Link href="#signup">Medlemsansökan</Link>
+                    <Link href="#merch">Merch</Link>
+                    <Link href="#contact">Kontakt</Link>
                 </div>
                 {extra == "" && <div className="firstpage">
                     <img src="sus-logo.png" className="logo" alt="logo" />
@@ -123,7 +126,6 @@ function App() {
             <div className="page-container">
                 <Page src="pages/about.md" />
                 <Page src="pages/social.md" />
-                <Page src="pages/events.md" />
                 <Page src="pages/signup.md" />
                 <Page src="pages/merch.md" />
                 <Page src="pages/contact.md" />

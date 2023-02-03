@@ -3,7 +3,7 @@
     background-color: #4ae;
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    max-width: 80vw;
 }
 
 .item
@@ -17,6 +17,7 @@
     align-items: center;
     margin: 0.2em;
     position: relative;
+    flex-shrink: 0;
 }
 
 .item-price
@@ -29,13 +30,12 @@
 .item-container
 {  
     background-color: #777;
-    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 0.4em;
     box-sizing: border-box;
     flex-direction: row;
-    flex-wrap: wrap;
-    overflow-y: scroll;
+    overflow-x: scroll;
     max-height: 24em;
 }

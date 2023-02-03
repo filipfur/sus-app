@@ -22,14 +22,6 @@ export function MerchWidget()
             <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
             <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
             <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
-            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
-            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
-            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
-            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
-            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
-            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
-            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
-            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
         </div>
         <div className="footer">
             <span>Cost: 0.0 SEK</span>
