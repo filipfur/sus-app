@@ -5,6 +5,6 @@ Som medlem får du bland annat:
 Möjlighet att delta i SUS evenemang till reducerat medlemspris
 Tillgång till medlemspris SUS-shoppen
 
-Så blir du medlem
-Ansökan för medlemskap görs via [Form]
-Medlemsavgift om 30 kr görs via [Swish?]
+Medlemsansökan görs via följande [formulär](google.com).
+
+![quote Medlemsavgiften för 2023 är 30.00 SEK och betalas till swishnr +46 123 45 67]()

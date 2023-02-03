@@ -1,5 +1,5 @@
 # Merch {#merch}
 
-Medlemskap ingår vid inköp av produkt.
+![merch-widget]()
 
-*API Widget från Merchplatfform*
+Medlemskap ingår vid inköp av produkt.
