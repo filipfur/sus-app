@@ -1,10 +1,9 @@
 # Medlemsansökan {#signup}
 
 Svenska Spelutvecklingssällskapet (SUS) är oberoende organisation, som medlem stödjer och bidrar Du till SUS verksamhet att främja Svensk Spelutveckling. Tack vare våra medlemmar är vi en betydelsefull opartisk samtalspartner inom svensk spelutveckling.
-Som medlem får du bland annat:
-Möjlighet att delta i SUS evenemang till reducerat medlemspris
-Tillgång till medlemspris SUS-shoppen
 
-Medlemsansökan görs via följande [formulär](google.com).
+För att din ansökan ska kunna godkännas behöver du betala medlemsavgiften. Medlemsavgiften år 2023 ligger på 30.00 SEK och betalas via Swish till 0735254216 (Alexander Stangel).
 
-![quote Medlemsavgiften för 2023 är 30.00 SEK och betalas till swishnr +46 123 45 67]()
+![signup-widget]()
+
+Fungerar det inte? Här kommer en [länk direkt till formuläret.](https://docs.google.com/forms/d/e/1FAIpQLSc_bNC0OfqnGf7MDV_-7ORzSmL4og4yBtzFoK1r82-kD69DGA/viewform)

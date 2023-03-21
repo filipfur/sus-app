@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/sus-app/static/css/main.defbc3fa.css",
-    "main.js": "/sus-app/static/js/main.3e6c31e1.js",
+    "main.css": "/sus-app/static/css/main.f5d36383.css",
+    "main.js": "/sus-app/static/js/main.9ff220c8.js",
     "static/js/787.b607cf27.chunk.js": "/sus-app/static/js/787.b607cf27.chunk.js",
     "static/media/logo.svg": "/sus-app/static/media/logo.85eeeff8943af9b39e2fe6616753f6a9.svg",
     "index.html": "/sus-app/index.html",
-    "main.defbc3fa.css.map": "/sus-app/static/css/main.defbc3fa.css.map",
-    "main.3e6c31e1.js.map": "/sus-app/static/js/main.3e6c31e1.js.map",
+    "main.f5d36383.css.map": "/sus-app/static/css/main.f5d36383.css.map",
+    "main.9ff220c8.js.map": "/sus-app/static/js/main.9ff220c8.js.map",
     "787.b607cf27.chunk.js.map": "/sus-app/static/js/787.b607cf27.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.defbc3fa.css",
-    "static/js/main.3e6c31e1.js"
+    "static/css/main.f5d36383.css",
+    "static/js/main.9ff220c8.js"
   ]
 }
