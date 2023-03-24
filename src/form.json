@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Where did you find this library?",
+    "description": "null",
+    "type": "RADIO",
+    "id": "2081366314",
+    "options": [ ],
+    "required": "true"
+  },
+  {
+    "label": "How would you rate this library?",
+    "description": "null",
+    "type": "LINEAR",
+    "id": "1587407061",
+    "legend": { "labelFirst": "Really bad", "labelLast": "Really good" },
+    "options": [
+    ],
+    "required": "true"
+  },
+  {
+    "label": "Do you want to give some feedback?",
+    "description": "null",
+    "type": "LONG_ANSWER",
+    "id": "1864908950",
+    "required": "false"
+  }
+]

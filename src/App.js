@@ -9,6 +9,7 @@ import remarkGfm from 'remark-gfm';
 import remarkHeadingId from 'remark-heading-id';
 import { margin, width } from '@mui/system';
 import { MerchWidget } from './MerchWidget';
+import { SignupWidget } from './SignupWidget';
 
 export function ImageRenderer({ src, alt }) {
     var content = <img src={src} alt={alt} />;
@@ -40,6 +41,10 @@ export function ImageRenderer({ src, alt }) {
     else if (alt == "merch-widget")
     {
         content = <MerchWidget></MerchWidget>
+    }
+    else if (alt === "signup-widget")
+    {
+        content = <SignupWidget></SignupWidget>
     }
     else if (alt === "hspacer") {
         content = <span style={{ marginLeft: src, visibility: "hidden" }}></span>
@@ -90,6 +95,12 @@ function App() {
         return () => window.removeEventListener("scroll", handleScroll)
     }, [extra]);
 
+    /*
+    <a className="link" href="#events">
+                        <span>Events</span>
+    </a>
+    */
+
 
     return (
         <div className="App">
@@ -100,9 +111,6 @@ function App() {
                     </a>
                     <a className="link" href='#discord'>
                         <span>Discord</span>
-                    </a>
-                    <a className="link" href="#events">
-                        <span>Events</span>
                     </a>
                     <a className="link" href="#signup">
                         <span>Medlemsansökan</span>
@@ -123,7 +131,6 @@ function App() {
             <div className="page-container">
                 <Page src="pages/about.md" />
                 <Page src="pages/social.md" />
-                <Page src="pages/events.md" />
                 <Page src="pages/signup.md" />
                 <Page src="pages/merch.md" />
                 <Page src="pages/contact.md" />
@@ -131,6 +138,7 @@ function App() {
             <div id="top-of-site-pixel-anchor"></div>
         </div>
     );
+                /*<Page src="pages/events.md" />*/
 }
 
 export default App;

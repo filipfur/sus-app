@@ -12,9 +12,10 @@ function WidgetItem({children, src})
 
 export function MerchWidget()
 {
-    return (<div className="widget">
+            /*<WidgetItem><img style={{width: "8em", height: "8em"}} src={"./sus-logo.png"}/></WidgetItem>*/
+            return (<div className="widget">
         <div className='item-container'>
-            <WidgetItem><img style={{width: "8em", height: "8em"}} src={"./sus-logo.png"}/></WidgetItem>
+            <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
             <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
             <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
             <WidgetItem><GiLockedChest style={{width: "4em", height: "4em"}}/></WidgetItem>
