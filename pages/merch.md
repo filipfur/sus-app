@@ -2,4 +2,4 @@
 
 ![merch-widget]()
 
-Medlemskap ingår vid inköp av produkt.
+Vi håller på att öppna en online-butik för SUS-merchandise.
