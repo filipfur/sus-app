@@ -11,6 +11,8 @@ import { margin, width } from '@mui/system';
 import { MerchWidget } from './MerchWidget';
 import { SignupWidget } from './SignupWidget';
 
+const SCROLL_THRESH_Y = 0;
+
 export function ImageRenderer({ src, alt }) {
     var content = <img src={src} alt={alt} />;
     if (alt === "react-icon") {
@@ -23,7 +25,7 @@ export function ImageRenderer({ src, alt }) {
     }
     else if (alt.startsWith("quote")) {
         content = (<>
-            <div style={{ borderLeft: "0.2em solid magenta", fontWeight: "bold", fontStyle: "italic", paddingLeft: "0.5em" }}>
+            <div className="quote">
                 <span>
                     {alt.substring(alt.indexOf(" ") + 1)}
                 </span>
@@ -52,7 +54,7 @@ export function ImageRenderer({ src, alt }) {
     return content;
 }
 
-export function Page({ src }) {
+export function Page({ src, bg, bs, pt }) {
     const [content, setContent] = useState("");
 
     useEffect(() => {
@@ -64,13 +66,27 @@ export function Page({ src }) {
     }, [src]);
 
     return (
-        <div className="page box">
+        <div className="page box" style={{background: bg, boxShadow: bs, paddingTop: pt}}>
             <ReactMarkdown children={content} remarkPlugins={[remarkGfm, remarkHeadingId]} components={{ img: ImageRenderer }} />
         </div>
     )
 }
 
 // document.getElementsByTagName("h1")[0].scrollIntoView();
+
+function Link({children, href})
+{
+    return (
+        <a className="link" href={href} /*onClick={() => {
+            if(window.scrollY <= SCROLL_THRESH_Y)
+            {
+                window.scrollTo(0, SCROLL_THRESH_Y + 1);
+            }
+        }}*/>
+            <span>{children}</span>
+        </a>
+    )
+}
 
 function App() {
 
@@ -82,7 +98,7 @@ function App() {
         });*/
 
         const handleScroll = () => {
-            if (window.scrollY > 64) {
+            if (window.scrollY > SCROLL_THRESH_Y) {
                 setExtra(" slippin");
             }
             else {
@@ -106,21 +122,11 @@ function App() {
         <div className="App">
             <header className={"header frame box" + extra}>
                 <div className='link-container'>
-                    <a className="link" href=".">
-                        <span>Om oss</span>
-                    </a>
-                    <a className="link" href='#discord'>
-                        <span>Discord</span>
-                    </a>
-                    <a className="link" href="#signup">
-                        <span>Medlemsansökan</span>
-                    </a>
-                    <a className="link" href='#merch'>
-                        <span>Merch</span>
-                    </a>
-                    <a className="link" href="#contact">
-                        <span>Kontakt</span>
-                    </a>
+                    <Link href="#about">Om oss</Link>
+                    <Link href="#discord">Discord</Link>
+                    <Link href="#signup">Medlemsansökan</Link>
+                    <Link href="#merch">Merch</Link>
+                    <Link href="#contact">Kontakt</Link>
                 </div>
                 {extra == "" && <div className="firstpage">
                     <img src="sus-logo.png" className="logo" alt="logo" />
@@ -129,11 +135,11 @@ function App() {
                 </div>}
             </header>
             <div className="page-container">
-                <Page src="pages/about.md" />
-                <Page src="pages/social.md" />
-                <Page src="pages/signup.md" />
-                <Page src="pages/merch.md" />
-                <Page src="pages/contact.md" />
+                <Page src="pages/about.md" bs="inset #16161640 0 0 0.45em 0.225em" pt="6em"/>
+                <Page src="pages/social.md" bg="#f8f8f8" bs="none"/>
+                <Page src="pages/signup.md" bs="inset #16161640 0 0 0.45em 0.225em"/>
+                <Page src="pages/merch.md" bg="#f8f8f8" bs="none"/>
+                <Page src="pages/contact.md" bs="inset #16161640 0 0 0.45em 0.225em"/>
             </div>
             <div id="top-of-site-pixel-anchor"></div>
         </div>
